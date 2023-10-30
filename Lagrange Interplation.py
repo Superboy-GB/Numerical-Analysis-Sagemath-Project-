@@ -1,6 +1,6 @@
 from sympy import symbols, simplify
 
-# Define the Lagrange interpolation function
+# We Define the Lagrange interpolation function
 def lagrange_interpolation(x_values, y_values):
     n = len(x_values)
     x = symbols('x')
@@ -15,10 +15,10 @@ def lagrange_interpolation(x_values, y_values):
 
     return simplify(result)
 
-# Example usage:
+# Example usage: Determine the Polynomial P_2(x) = a_0 + a_1x + a_2x2 whose graph passes through the points (1, 4), (2, 0) and (3, 12).
 x_values = [1, 2, 3]
 y_values = [4, 0, 12]
 
 interpolation_polynomial = lagrange_interpolation(x_values, y_values)
 expanded_polynomial = expand(interpolation_polynomial)
-print(expanded_polynomial)
+print(f"Hence, the Polynomial is {expanded_polynomial}")
