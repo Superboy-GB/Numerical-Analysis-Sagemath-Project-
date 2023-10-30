@@ -10,9 +10,9 @@ def do_linear_interpolation (point_1 , point_2 , point=None):
     left_equation = getEquation(x=x_1, y= y_0 ,denominator= denom_value)
     right_equation = getEquation(x=x_0, y=y_1, denominator = denom_value, second_point=True )
     if(not point):
-        print("The Polynomial of the equation is",left_equation ,"-" , right_equation)
+        print("The Polynomial of the equation is",left_equation ,"+" , right_equation)
     else:
-        print("The Polynomial of the equation is",left_equation ,"-" , right_equation)
+        print("The Polynomial of the equation is",left_equation ,"+" , right_equation)
         print(f"The value of y at x = {point} is {solveEquation(x_0, x_1, y_0, y_1, a=point)}")  # Print the interpolated value with 13 decimal places
     
 
