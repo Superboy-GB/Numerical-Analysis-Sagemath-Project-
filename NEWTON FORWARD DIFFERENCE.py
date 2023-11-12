@@ -36,4 +36,6 @@ def newton_forward(x, y, value):
 x = [40, 50, 60, 70, 80]
 y = [31, 73, 124, 159, 190]
 value = 52
-print("The interpolated value at", value, "is", newton_forward(x, y, value))
+result = newton_forward(x, y, value)
+rounded_result = round(result, 4)
+print("The interpolated value at", value, "is", rounded_result)
