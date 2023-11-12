@@ -36,5 +36,5 @@ b = 3
 n = 4  # Number of subintervals
 
 result = simpsons_rule(f, a, b, n)
-
-print(result)
+Approx_result = round(result, 4)
+print(Approx_result)
