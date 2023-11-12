@@ -10,7 +10,7 @@ def bisection_method(f, a, b, tol, max_iter):
 
     for i in range(max_iter):
         c = (a + b) / 2
-        if abs(f(c)) < tol:
+        if abs(f(c)) < eps:
             return c
         if f(a) * f(c) < 0:
             b = c
@@ -20,14 +20,14 @@ def bisection_method(f, a, b, tol, max_iter):
     print("Bisection method did not converge within the maximum number of iterations.")
     return None
 
-# Set the initial interval [a, b], tolerance (tol), and maximum number of iterations
+# Set the initial interval [a, b], epsilon (eps), and maximum number of iterations
 a = 0
 b = 3
-tolerance = 1e-6
+epsilon = 1e-6
 max_iterations = 100
 
 # Call the bisection method function
-root = bisection_method(f, a, b, tolerance, max_iterations)
+root = bisection_method(f, a, b, epsilon, max_iterations)
 
 #To round up to a 3 significant values as given
 result = round(root, 3)
