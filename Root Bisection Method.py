@@ -3,7 +3,7 @@ def f(x):
     return 5*(x**2) + 11*x - 17
 
 # Bisection method
-def bisection_method(f, a, b, tol, max_iter):
+def bisection_method(f, a, b, eps, max_iter):
     if f(a) * f(b) >= 0:
         print("Bisection method may not converge as f(a) and f(b) have the same sign.")
         return None
